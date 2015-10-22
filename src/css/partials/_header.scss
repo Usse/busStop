@@ -1,0 +1,49 @@
+header {
+  position:absolute;
+  top:0;
+  left:0;
+  height:50px;
+  width:100%;
+  z-index:500;
+  background-color:$header-color;
+
+  h2 {
+    float:left;
+    color:white;
+    padding: 0 20px;
+    margin: 0;
+    line-height: 50px;  
+  }
+
+  .search--box {
+    @media screen and (max-width:520px) { 
+      display: none;
+    }
+    float:right;
+    margin:10px 20px 0 0;
+    
+    input[type=text] {
+      border:0;
+      border-bottom:1px solid white;
+      border-radius:0;
+      background-color:$header-color;
+      outline:none;
+      color:white;
+    }
+
+    input[type=submit] {
+      border:0;
+      background: $active-color;
+      outline: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 2px;
+      margin-left: 5px;
+      transition: background 200ms;
+      &:hover {
+        background: $hover-color;
+      }
+    }
+
+  }
+}

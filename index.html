@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="dist/css/screen.css">
+  </head>
+
+  <body>
+
+    <header>
+      <h2>Bus stop search</h2>
+      <div class="search--box">
+        <input type="text" autocomplete="off">
+        <input type="submit" value="Search">
+      </div>
+    </header>
+
+    <div id="map"></div>
+
+    <div class="infoBox">
+      <div class="close">X</div>
+      <h3></h3>
+      <div class="messages"></div>
+      <table>
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Destination</th>
+            <th>Wait</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="dist/js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqLHfe43F-5Vw_dHwgO8gi_Wt_mSAdwkA&callback=startApp"></script>
+
+  </body>
+</html>

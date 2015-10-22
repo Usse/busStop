@@ -1,0 +1,78 @@
+
+.infoBox {
+  position:fixed;
+  width:50%;
+  right:-100%;;
+  top:50px;
+  bottom:auto;
+  height:100%;
+  background:rgba(255,255,255,.93);
+  overflow:scroll;
+  border-left:2px solid $border-color;
+  transition:right 400ms, bottom 400ms;
+  &.visible {
+    right:0;
+  }
+
+  @media screen and (max-width:768px) {
+    width:100%;
+    height:50%;
+    bottom:-50%;
+    top:auto;
+    left:0;
+    border-top:2px solid $border-color;
+    &.visible {
+      bottom:0;
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 5%;
+    top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.3em;
+    transition: color 200ms;
+    &:hover {
+      color:$active-color;
+    }
+  }
+
+  h3 {
+    padding:0 5%;
+    @extend %bold-font;
+  }
+
+  table {
+    width: 90%;
+    margin: 10px 5% 80px 5%;
+    text-align:left;
+    padding-bottom:20px;
+  }
+
+  tr {
+    @extend %tiny-font;
+    border-bottom:1px solid $border-color;
+  }
+
+  td {
+    padding:5px 0;
+  }
+
+  .messages {
+    width:90%;
+    margin:0 5% 30px 5%;
+
+    span {
+      display: block;
+      width: 90%;
+      padding: 2% 5%;
+      margin-bottom:5px;
+    }
+
+    .infoMessages {background: $info-color;}
+    .importantMessages {background: $warn-color;}
+    .criticalMessages {background: $critical-color;}
+  }
+}
